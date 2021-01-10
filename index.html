@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utg-8">
+        <title>VuJS Tutorial</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+
+    <body>
+        <div id="vue-app">
+            <h1>{{ name }}</h1>
+            <h1>{{greet("afternoon")}}</h1>
+            <a v-bind:href="website">google</a>
+            <input type="text"  :value = "name">
+            <p v-html = "websiteTag"></p>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
+
+
