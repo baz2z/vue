@@ -6,6 +6,14 @@ new Vue({
     methods:{
         greet: function(time){
             return "Good " + time + " " +this.name;
+        },
+
+        logName: function(){
+            console.log("name")
+        },
+        
+        logAge: function(){
+            console.log("age")
         }
     }
 })
