@@ -9,7 +9,36 @@
 
     <body>
         <div id="vue-app">
-            
+            <h1>Conditionals</h1>
+            <button v-on:click="error = !error ">Toggle Error</button>
+            <button v-on:click="success = !success ">Toggle Success</button>
+            <!-- Changes Dom -->
+            <!-- <p v-if="error">There has been an Error</p>
+            <p v-else-if="success">There has been a Success</p> -->
+            <!-- Doesnt Change Dom, only display state -->
+            <p v-show="error">There has been an Error</p>
+            <p v-show="success">There has been an Success</p>
+
+
+            <h1>Looping</h1>
+            {{character[0]}}
+            <ul>
+                <li v-for="charact in character">{{charact}}</li>
+            </ul>
+
+            <ul>
+                <li v-for="(ninja, index) in ninjas">{{index + 1}} . {{ninja.name}} - {{ninja.age}}</li>
+            </ul>
+<!-- Template: So that not another div(markup) is unneccessarily created -->
+            <template v-for="(ninja, index) in ninjas">
+                <h3>{{index}}. {{ninja.name}}</h3>
+                <p>{{ninja.age}}</p>
+            </template>
+
+            <template v-for="ninja in ninjas">
+                <div v-for="(value, key) in ninja">{{key}} - {{value}}</div>
+            </template>
+
         </div>
         <script src="app.js"></script>
     </body>
