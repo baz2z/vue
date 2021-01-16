@@ -1,0 +1,13 @@
+span{
+    background-color: red;
+    display: inline-block;
+    padding: 10px;
+}
+
+.available span{
+    background-color: green;
+}
+
+.nearby span:after{
+    content: "nearby"
+}

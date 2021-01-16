@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utg-8">
-        <title>VuJS Tutorial</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://unpkg.com/vue"></script>
-    </head>
 
-    <body>
-        <div id="vue-app">
-            
+<head>
+    <meta charset="utg-8">
+    <title>VuJS Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="vue-app">
+        <h1>Dynamic Css</h1>
+<!--                 
+            <h1>Example1</h1>
+            <div v-on:click="available = !available" v-bind:class="{available}">
+                <span>Ryu</span>
+            </div> -->
+ 
+        <h1>Example2</h1>
+        <button v-on:click="nearby = !nearby">Toggle nearby</button>
+        <button v-on:click= "available = !available">Toggle available</button>
+        <div v-bind:class="compClasses">
+            <span>Ryu</span>
         </div>
-        <script src="app.js"></script>
-    </body>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
 </html>
-
-
