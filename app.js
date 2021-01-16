@@ -3,9 +3,12 @@ new Vue({
     data: {
         name: "Seb",
     },
+    
     methods:{
-        greet: function(time){
-            return "Good " + time + " " +this.name;
-        }
+
+    },
+
+    computed:{
+
     }
 })
